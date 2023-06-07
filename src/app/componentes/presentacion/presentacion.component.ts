@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PorfolioService } from 'src/app/servicios/porfolio.service';
+import { PersonaService } from 'src/app/servicio/persona.service';
 
 @Component({
   selector: 'app-presentacion',
@@ -7,10 +7,10 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
   styleUrls: ['./presentacion.component.css']
 })
 export class PresentacionComponent  implements OnInit{
-  constructor(private datosPorfolio:PorfolioService){}
+  constructor(){}
 
   ngOnInit(): void {
-    this.datosPorfolio.obtenerDatos();
+   
   }
 
 }

@@ -7,14 +7,26 @@ import { EncabezadoComponent } from './componentes/encabezado/encabezado.compone
 import { AcercaComponent } from './componentes/acerca/acerca.component';
 import { EducacaionComponent } from './componentes/educacaion/educacaion.component';
 import { PresentacionComponent } from './componentes/presentacion/presentacion.component';
-import { PorfolioService } from './servicios/porfolio.service';
-import { HttpClient } from '@angular/common/http';
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HysComponent } from './componentes/hys/hys.component';
 import { ProyectoComponent } from './componentes/proyecto/proyecto.component';
 import { FooterComponent } from './componentes/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './componentes/home/home.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
 @NgModule({
+  imports: [
+    BrowserModule,
+    FormsModule,
+    CommonModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    NgCircleProgressModule.forRoot({}),
+    HttpClientModule,
+  ],
   declarations: [
     AppComponent,
     EncabezadoComponent,
@@ -24,12 +36,9 @@ import { FooterComponent } from './componentes/footer/footer.component';
     ExperienciaComponent,
     HysComponent,
     ProyectoComponent,
-    FooterComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgCircleProgressModule.forRoot({})
+    FooterComponent,
+    HomeComponent,
+   
   
   ],
   providers: [],

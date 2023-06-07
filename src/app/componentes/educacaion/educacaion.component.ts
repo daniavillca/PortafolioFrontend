@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PorfolioService } from 'src/app/servicios/porfolio.service';
+
 
 @Component({
   selector: 'app-educacaion',
@@ -7,10 +7,10 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
   styleUrls: ['./educacaion.component.css']
 })
 export class EducacaionComponent implements OnInit{
-  constructor(private datosPorfolio:PorfolioService){}
+  constructor(){}
 
   ngOnInit(): void {
-    this.datosPorfolio.obtenerDatos();
+    
   }
 
 }
