@@ -16,6 +16,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './componentes/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { interceptorProvider } from './servicio/interceptor-service';
+import { NewExperienciaComponent } from './componentes/experiencia/new-experiencia/new-experiencia.component';
+import { EditExperienciaComponent } from './componentes/experiencia/edit-experiencia/edit-experiencia.component';
 
 @NgModule({
   imports: [
@@ -38,10 +41,14 @@ import { CommonModule } from '@angular/common';
     ProyectoComponent,
     FooterComponent,
     HomeComponent,
+    NewExperienciaComponent,
+    EditExperienciaComponent,
    
   
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
